@@ -8,6 +8,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
 
 @end
 
@@ -15,8 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self configure];
 }
 
+- (void)configure {
+    self.playButton.layer.borderWidth = 1;
+    self.playButton.layer.borderColor = UIColor.whiteColor.CGColor;
+    self.playButton.contentEdgeInsets = UIEdgeInsetsMake(10, 20, 10, 20);
+    self.playButton.layer.cornerRadius = 10;
+}
 
 @end

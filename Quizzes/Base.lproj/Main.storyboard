@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -14,29 +14,55 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hE-nm-3Hm">
-                                <rect key="frame" x="132.5" y="260" width="55" height="48"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-background" translatesAutoresizingMaskIntoConstraints="NO" id="oyN-ZQ-W3R">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQQ-a9-1qv">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FRe-ae-OC2">
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="systemThinMaterialDark"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="716-ze-1YH">
+                                <rect key="frame" x="121" y="436.66666666666669" width="186" height="53"/>
+                                <color key="backgroundColor" red="0.0054886261929999996" green="0.74376243350000004" blue="0.88227349519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <state key="normal" title="Play"/>
+                                <state key="normal" title="Play Quizzes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5hE-nm-3Hm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Iug-g8-SKV"/>
-                            <constraint firstItem="5hE-nm-3Hm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WBs-4w-VmZ"/>
+                            <constraint firstItem="oyN-ZQ-W3R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8R4-Xh-AEw"/>
+                            <constraint firstItem="716-ze-1YH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NQ5-3Q-Yxx"/>
+                            <constraint firstItem="oyN-ZQ-W3R" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T31-5S-kVf"/>
+                            <constraint firstAttribute="bottom" secondItem="NQQ-a9-1qv" secondAttribute="bottom" id="WCb-Re-hsi"/>
+                            <constraint firstItem="oyN-ZQ-W3R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a7N-Cr-S3f"/>
+                            <constraint firstItem="NQQ-a9-1qv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dNb-UM-RAB"/>
+                            <constraint firstItem="716-ze-1YH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gh3-jf-Lgm"/>
+                            <constraint firstItem="NQQ-a9-1qv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jMR-sk-ULE"/>
+                            <constraint firstItem="oyN-ZQ-W3R" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="twc-wd-g49"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NQQ-a9-1qv" secondAttribute="trailing" id="uVx-eE-kXx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playButton" destination="716-ze-1YH" id="rEC-y5-Uyx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="78"/>
+            <point key="canvasLocation" x="18.75" y="77.112676056338032"/>
         </scene>
     </scenes>
     <resources>
+        <image name="home-background" width="654" height="960"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
