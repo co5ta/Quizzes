@@ -118,6 +118,7 @@
 		2267E3C52587FE460075DE53 /* Quizzes */ = {
 			isa = PBXGroup;
 			children = (
+				22CEA3E92588DA6B004A46D8 /* Model */,
 				22587F552588AB1500712F92 /* Supporting Files */,
 				2267E3CC2587FE460075DE53 /* ViewController.h */,
 				2267E3CD2587FE460075DE53 /* ViewController.m */,
@@ -143,6 +144,13 @@
 				2267E3EF2587FE4A0075DE53 /* Info.plist */,
 			);
 			path = QuizzesUITests;
+			sourceTree = "<group>";
+		};
+		22CEA3E92588DA6B004A46D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
