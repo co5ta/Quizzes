@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -14,17 +14,94 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-background" translatesAutoresizingMaskIntoConstraints="NO" id="oyN-ZQ-W3R">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <visualEffectView opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQQ-a9-1qv">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQQ-a9-1qv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FRe-ae-OC2">
-                                    <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9O7-2c-C3b" userLabel="Top View">
+                                            <rect key="frame" x="30" y="0.0" width="260" height="284"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle est la capitale de la Nouvelle-Zélande, au sud-ouest de l'océan Pacifique ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7i-1j-Cb1">
+                                                    <rect key="frame" x="0.0" y="111.5" width="260" height="61"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="V7i-1j-Cb1" firstAttribute="leading" secondItem="9O7-2c-C3b" secondAttribute="leading" id="VHs-Oc-bEM"/>
+                                                <constraint firstAttribute="trailing" secondItem="V7i-1j-Cb1" secondAttribute="trailing" id="bUE-Mj-vCl"/>
+                                                <constraint firstItem="V7i-1j-Cb1" firstAttribute="centerY" secondItem="9O7-2c-C3b" secondAttribute="centerY" id="tlr-Mf-gFq"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGi-h4-KlJ" userLabel="Bottom View">
+                                            <rect key="frame" x="30" y="284" width="260" height="284"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cTI-wv-JPi">
+                                                    <rect key="frame" x="0.0" y="31" width="260" height="222"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMO-hc-LGF">
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="33"/>
+                                                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <state key="normal" title="Route du rhum">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M67-FR-209">
+                                                            <rect key="frame" x="0.0" y="63" width="260" height="33"/>
+                                                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <state key="normal" title="Vendée Globe">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CH5-Ag-JO3">
+                                                            <rect key="frame" x="0.0" y="126" width="260" height="33"/>
+                                                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <state key="normal" title="Trophée du rhum">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYT-nH-DAd">
+                                                            <rect key="frame" x="0.0" y="189" width="260" height="33"/>
+                                                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <state key="normal" title="Route du café">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="cTI-wv-JPi" secondAttribute="trailing" id="KHh-no-Ka9"/>
+                                                <constraint firstItem="cTI-wv-JPi" firstAttribute="centerY" secondItem="NGi-h4-KlJ" secondAttribute="centerY" id="ceG-JA-Dki"/>
+                                                <constraint firstItem="cTI-wv-JPi" firstAttribute="leading" secondItem="NGi-h4-KlJ" secondAttribute="leading" id="oMY-65-6OB"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9O7-2c-C3b" firstAttribute="leading" secondItem="FRe-ae-OC2" secondAttribute="leading" constant="30" id="1WR-NI-qXM"/>
+                                        <constraint firstAttribute="trailing" secondItem="9O7-2c-C3b" secondAttribute="trailing" constant="30" id="3iC-IK-jqo"/>
+                                        <constraint firstItem="9O7-2c-C3b" firstAttribute="top" secondItem="FRe-ae-OC2" secondAttribute="top" id="4pM-rk-DSR"/>
+                                        <constraint firstAttribute="bottom" secondItem="9O7-2c-C3b" secondAttribute="bottom" multiplier="2" id="90A-YN-VDv"/>
+                                        <constraint firstAttribute="bottom" secondItem="NGi-h4-KlJ" secondAttribute="bottom" id="ACL-ot-AQb"/>
+                                        <constraint firstItem="NGi-h4-KlJ" firstAttribute="trailing" secondItem="9O7-2c-C3b" secondAttribute="trailing" id="fSg-FX-gso"/>
+                                        <constraint firstItem="NGi-h4-KlJ" firstAttribute="top" secondItem="9O7-2c-C3b" secondAttribute="bottom" id="vKQ-0h-8KC"/>
+                                        <constraint firstItem="NGi-h4-KlJ" firstAttribute="leading" secondItem="9O7-2c-C3b" secondAttribute="leading" id="vyd-PH-Qm2"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="systemThinMaterialDark"/>
                             </visualEffectView>
@@ -51,9 +128,19 @@
                             <constraint firstItem="oyN-ZQ-W3R" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="twc-wd-g49"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NQQ-a9-1qv" secondAttribute="trailing" id="uVx-eE-kXx"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="716-ze-1YH"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="option1Button" destination="PMO-hc-LGF" id="7kD-zP-LgR"/>
+                        <outlet property="option2Button" destination="M67-FR-209" id="pI9-Ew-pGI"/>
+                        <outlet property="option3Button" destination="CH5-Ag-JO3" id="XMC-cj-yRj"/>
+                        <outlet property="option4Button" destination="sYT-nH-DAd" id="E42-kv-cQr"/>
                         <outlet property="playButton" destination="716-ze-1YH" id="rEC-y5-Uyx"/>
+                        <outlet property="questionLabel" destination="V7i-1j-Cb1" id="uhq-lK-J6L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -65,6 +152,9 @@
         <image name="home-background" width="654" height="960"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
