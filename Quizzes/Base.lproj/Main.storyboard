@@ -30,8 +30,8 @@
                                             <rect key="frame" x="30" y="0.0" width="260" height="284"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle est la capitale de la Nouvelle-Zélande, au sud-ouest de l'océan Pacifique ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7i-1j-Cb1">
-                                                    <rect key="frame" x="0.0" y="111.5" width="260" height="61"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="0.0" y="105" width="260" height="74"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -46,37 +46,37 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGi-h4-KlJ" userLabel="Bottom View">
                                             <rect key="frame" x="30" y="284" width="260" height="284"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cTI-wv-JPi">
-                                                    <rect key="frame" x="0.0" y="31" width="260" height="222"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cTI-wv-JPi">
+                                                    <rect key="frame" x="0.0" y="25" width="260" height="234"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMO-hc-LGF">
-                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="33"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="36"/>
                                                             <color key="backgroundColor" systemColor="systemTealColor"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                             <state key="normal" title="Route du rhum">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M67-FR-209">
-                                                            <rect key="frame" x="0.0" y="63" width="260" height="33"/>
+                                                            <rect key="frame" x="0.0" y="66" width="260" height="36"/>
                                                             <color key="backgroundColor" systemColor="systemTealColor"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                             <state key="normal" title="Vendée Globe">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CH5-Ag-JO3">
-                                                            <rect key="frame" x="0.0" y="126" width="260" height="33"/>
+                                                            <rect key="frame" x="0.0" y="132" width="260" height="36"/>
                                                             <color key="backgroundColor" systemColor="systemTealColor"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                             <state key="normal" title="Trophée du rhum">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYT-nH-DAd">
-                                                            <rect key="frame" x="0.0" y="189" width="260" height="33"/>
+                                                            <rect key="frame" x="0.0" y="198" width="260" height="36"/>
                                                             <color key="backgroundColor" systemColor="systemTealColor"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                             <state key="normal" title="Route du café">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
@@ -106,12 +106,15 @@
                                 <blurEffect style="systemThinMaterialDark"/>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="716-ze-1YH">
-                                <rect key="frame" x="121" y="436.66666666666669" width="186" height="53"/>
-                                <color key="backgroundColor" red="0.0054886261929999996" green="0.74376243350000004" blue="0.88227349519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="77.5" y="260" width="165" height="48"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <state key="normal" title="Play Quizzes">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jy8-A7-uL1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -128,11 +131,6 @@
                             <constraint firstItem="oyN-ZQ-W3R" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="twc-wd-g49"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NQQ-a9-1qv" secondAttribute="trailing" id="uVx-eE-kXx"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="716-ze-1YH"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="playButton" destination="716-ze-1YH" id="rEC-y5-Uyx"/>

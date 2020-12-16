@@ -30,22 +30,37 @@ typedef NS_CLOSED_ENUM(NSInteger, GameState) {
 /// Called after the controller's view is loaded into memory
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.question = [Question new];
     [self configure];
 }
 
 /// Configures the view controller
 - (void)configure {
-    self.question = [Question new];
     [self setUpPlayButton];
     [self setUpOptionButtons];
     [self setGameState:starting];
-    [self getQuestion];
 }
 
 /// Updates the views according to the game state
 - (void)setGameState: (GameState) state {
-    [self.playButton setHidden:state == starting ? false : true];
-    if (state == playing) { [self updateQuestion]; }
+    switch (state) {
+        case starting:
+            [self.playButton setHidden:NO];
+            [self.questionLabel setAlpha:0];
+            for (UIButton *button in self.optionButtons) {
+                [button setAlpha:0];
+                button.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.1, 0.1);
+            }
+            break;
+        case loading:
+            [self.playButton setHidden:YES];
+            break;
+        case playing:
+            [self updateQuestion];
+            break;
+        default:
+            break;
+    }
 }
 
 /// Sets up play button
@@ -58,12 +73,15 @@ typedef NS_CLOSED_ENUM(NSInteger, GameState) {
 
 /// Sets up option buttons style
 - (void)setUpOptionButtons {
-    NSLog(@"%@", self.optionButtons);
     for (UIButton *button in self.optionButtons) {
-        NSLog(@"%@", button);
         button.layer.cornerRadius = 10;
         button.contentEdgeInsets = UIEdgeInsetsMake(10, 0, 10, 0);
     }
+}
+
+/// Action which launch a game
+- (IBAction)startGame:(UIButton *)sender {
+    [self getQuestion];
 }
 
 /// Fetch a question from the API
@@ -97,10 +115,19 @@ typedef NS_CLOSED_ENUM(NSInteger, GameState) {
     for (int i = 0; i < [self.question.options count]; i++) {
         [self.optionButtons[i] setTitle:self.question.options[i] forState:UIControlStateNormal];
     }
+    
     [UIView animateWithDuration:0.5 animations:^{
-        [self.questionLabel setHidden:NO];
-        for (UIButton *button in self.optionButtons) {
-            [button setHidden:NO];
+        [self.questionLabel setAlpha:1];
+    } completion:^(BOOL finished) {
+        if (finished) {
+            NSTimeInterval delay = 1;
+            for (UIButton *button in self.optionButtons) {
+                [UIView animateWithDuration:0.3 delay:delay usingSpringWithDamping:0.8 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                    [button setAlpha:1];
+                    button.transform = CGAffineTransformIdentity;
+                } completion:nil];
+                delay += 0.5;
+            }
         }
     }];
 }
