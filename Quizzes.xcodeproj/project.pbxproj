@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2256AE1E258A56EC003E6908 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256AE1D258A56EC003E6908 /* Question.m */; };
 		2267E3C82587FE460075DE53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2267E3C72587FE460075DE53 /* AppDelegate.m */; };
 		2267E3CB2587FE460075DE53 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2267E3CA2587FE460075DE53 /* SceneDelegate.m */; };
 		2267E3CE2587FE460075DE53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2267E3CD2587FE460075DE53 /* ViewController.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2256AE1C258A56EC003E6908 /* Question.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		2256AE1D258A56EC003E6908 /* Question.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		2267E3C32587FE460075DE53 /* Quizzes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2267E3C62587FE460075DE53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2267E3C72587FE460075DE53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 		22CEA3E92588DA6B004A46D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2256AE1C258A56EC003E6908 /* Question.h */,
+				2256AE1D258A56EC003E6908 /* Question.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 			files = (
 				2267E3CE2587FE460075DE53 /* ViewController.m in Sources */,
 				2267E3C82587FE460075DE53 /* AppDelegate.m in Sources */,
+				2256AE1E258A56EC003E6908 /* Question.m in Sources */,
 				2267E3D92587FE490075DE53 /* main.m in Sources */,
 				2267E3CB2587FE460075DE53 /* SceneDelegate.m in Sources */,
 			);

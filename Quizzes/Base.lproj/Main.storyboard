@@ -135,12 +135,12 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="option1Button" destination="PMO-hc-LGF" id="7kD-zP-LgR"/>
-                        <outlet property="option2Button" destination="M67-FR-209" id="pI9-Ew-pGI"/>
-                        <outlet property="option3Button" destination="CH5-Ag-JO3" id="XMC-cj-yRj"/>
-                        <outlet property="option4Button" destination="sYT-nH-DAd" id="E42-kv-cQr"/>
                         <outlet property="playButton" destination="716-ze-1YH" id="rEC-y5-Uyx"/>
                         <outlet property="questionLabel" destination="V7i-1j-Cb1" id="uhq-lK-J6L"/>
+                        <outletCollection property="optionButtons" destination="PMO-hc-LGF" id="8zQ-Kk-rcG"/>
+                        <outletCollection property="optionButtons" destination="M67-FR-209" id="Rn0-ag-HP0"/>
+                        <outletCollection property="optionButtons" destination="CH5-Ag-JO3" id="hwR-fg-otc"/>
+                        <outletCollection property="optionButtons" destination="sYT-nH-DAd" id="flU-w8-Ys4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
