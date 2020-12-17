@@ -54,6 +54,13 @@ typedef NS_CLOSED_ENUM(NSInteger, GameState) {
             break;
         case loading:
             [self.playButton setHidden:YES];
+            [self.questionLabel setAlpha:0];
+            for (UIButton *button in self.optionButtons) {
+                [button setAlpha:0];
+                button.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.1, 0.1);
+                [button setTitle:@"" forState:UIControlStateNormal];
+                [button setBackgroundColor:UIColor.systemTealColor];
+            }
             break;
         case playing:
             [self updateQuestion];
@@ -87,7 +94,7 @@ typedef NS_CLOSED_ENUM(NSInteger, GameState) {
 /// Fetch a question from the API
 - (void)getQuestion {
     [self setGameState:loading];
-    NSURL *url = [NSURL URLWithString:@"https://www.openquizzdb.org/api.php?key=6C52KPNVYW&choice=4"];
+    NSURL *url = [NSURL URLWithString:@"https://opentdb.com/api.php?amount=1"];
     NSError *error;
     
     NSData *data = [NSData dataWithContentsOfURL:url options:0 error:&error];
@@ -102,10 +109,14 @@ typedef NS_CLOSED_ENUM(NSInteger, GameState) {
         exit(0);
     }
     
+    NSLog(@"%@", dico);
     NSDictionary *results = dico[@"results"][0];
     self.question.title = results[@"question"];
-    self.question.response = results[@"reponse_correcte"];
-    self.question.options = results[@"autres_choix"];
+    self.question.response = results[@"correct_answer"];
+    self.question.options = [NSMutableArray arrayWithArray:results[@"incorrect_answers"]];
+    [self.question.options addObject:results[@"correct_answer"]];
+    NSInteger randomIndex = arc4random_uniform((u_int32_t )self.question.options.count-1);
+    [self.question.options exchangeObjectAtIndex:self.question.options.count-1 withObjectAtIndex:randomIndex];
     [self setGameState:playing];
 }
 
@@ -122,6 +133,7 @@ typedef NS_CLOSED_ENUM(NSInteger, GameState) {
         if (finished) {
             NSTimeInterval delay = 1;
             for (UIButton *button in self.optionButtons) {
+                if ([button.currentTitle isEqualToString:@""]) { continue; }
                 [UIView animateWithDuration:0.3 delay:delay usingSpringWithDamping:0.8 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                     [button setAlpha:1];
                     button.transform = CGAffineTransformIdentity;
@@ -130,6 +142,14 @@ typedef NS_CLOSED_ENUM(NSInteger, GameState) {
             }
         }
     }];
+}
+
+- (IBAction)checkAnswer:(UIButton *)sender {
+    BOOL goodAnswer = sender.currentTitle == self.question.response ? YES : NO;
+    [sender setBackgroundColor:goodAnswer ? UIColor.systemGreenColor : UIColor.systemRedColor];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self getQuestion];
+    });
 }
 
 @end

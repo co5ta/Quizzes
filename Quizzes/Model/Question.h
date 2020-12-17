@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Question : NSObject
 @property NSString *title;
 @property NSString *response;
-@property NSArray<NSString*> *options;
+@property NSMutableArray<NSString*> *options;
 @end
 
 NS_ASSUME_NONNULL_END

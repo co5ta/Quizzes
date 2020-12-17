@@ -56,6 +56,9 @@
                                                             <state key="normal" title="Route du rhum">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GoD-fP-IMS"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M67-FR-209">
                                                             <rect key="frame" x="0.0" y="66" width="260" height="36"/>
@@ -64,6 +67,9 @@
                                                             <state key="normal" title="Vendée Globe">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e7S-hy-qlb"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CH5-Ag-JO3">
                                                             <rect key="frame" x="0.0" y="132" width="260" height="36"/>
@@ -72,6 +78,9 @@
                                                             <state key="normal" title="Trophée du rhum">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KCd-AW-XkB"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYT-nH-DAd">
                                                             <rect key="frame" x="0.0" y="198" width="260" height="36"/>
@@ -80,6 +89,9 @@
                                                             <state key="normal" title="Route du café">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qh6-mX-DCp"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
