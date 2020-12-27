@@ -94,7 +94,7 @@ typedef NS_CLOSED_ENUM(NSInteger, GameState) {
 /// Fetch a question from the API
 - (void)getQuestion {
     [self setGameState:loading];
-    NSURL *url = [NSURL URLWithString:@"https://opentdb.com/api.php?amount=1"];
+    NSURL *url = [NSURL URLWithString:@"https://opentdb.com/api.php?amount=1&encode=url3986"];
     NSError *error;
     
     NSData *data = [NSData dataWithContentsOfURL:url options:0 error:&error];
@@ -109,7 +109,6 @@ typedef NS_CLOSED_ENUM(NSInteger, GameState) {
         exit(0);
     }
     
-    NSLog(@"%@", dico);
     NSDictionary *results = dico[@"results"][0];
     self.question.title = results[@"question"];
     self.question.response = results[@"correct_answer"];
@@ -122,9 +121,9 @@ typedef NS_CLOSED_ENUM(NSInteger, GameState) {
 
 /// updates the question displayed and the possible responses
 - (void)updateQuestion {
-    [self.questionLabel setText:self.question.title];
+    [self.questionLabel setText:[self.question.title stringByRemovingPercentEncoding]];
     for (int i = 0; i < [self.question.options count]; i++) {
-        [self.optionButtons[i] setTitle:self.question.options[i] forState:UIControlStateNormal];
+        [self.optionButtons[i] setTitle:[self.question.options[i] stringByRemovingPercentEncoding] forState:UIControlStateNormal];
     }
     
     [UIView animateWithDuration:0.5 animations:^{
@@ -144,6 +143,7 @@ typedef NS_CLOSED_ENUM(NSInteger, GameState) {
     }];
 }
 
+/// Checks if the answer is good or false and passes to the next question
 - (IBAction)checkAnswer:(UIButton *)sender {
     BOOL goodAnswer = sender.currentTitle == self.question.response ? YES : NO;
     [sender setBackgroundColor:goodAnswer ? UIColor.systemGreenColor : UIColor.systemRedColor];
